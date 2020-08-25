@@ -13,7 +13,7 @@
 @class SPEditorTextView;
 @class SPOutsideTouchView;
 
-@interface SPNoteEditorViewController : UIViewController  <SPActionSheetDelegate, SPActivityViewDelegate, UIActionSheetDelegate, SPTagViewDelegate, SPCollaboratorDelegate, SPHorizontalPickerViewDelegate, SPBucketDelegate> {
+@interface SPNoteEditorViewController : UIViewController  <SPActionSheetDelegate, SPActivityViewDelegate, UIActionSheetDelegate, SPTagViewDelegate, SPHorizontalPickerViewDelegate, SPBucketDelegate> {
     
     // Other Objects
     NSTimer *saveTimer;
@@ -38,8 +38,6 @@
     UIBarButtonItem *doneSearchButton;
     
     // sheets
-    SPActivityView *noteActivityView;
-    SPActionSheet *noteActionSheet;
     SPActionSheet *versionActionSheet;
     
     SPHorizontalPickerView *versionPickerView;
@@ -102,7 +100,6 @@
 - (void)endEditing:(id)sender;
 
 - (void)viewVersionAction:(id)sender;
-- (void)addCollaboratorsAction:(id)sender;
 - (void)trashNoteAction:(id)sender;
 
 @end
